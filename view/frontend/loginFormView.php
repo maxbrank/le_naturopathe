@@ -1,4 +1,5 @@
 <?php
+//
 // mise en mémoire tampon de ce qui suit
 ob_start();
 
