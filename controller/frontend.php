@@ -27,6 +27,7 @@ function register()
 		if ($password == $confirmPassword) {
 			// Hachage du mot de passe
 			$password_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			
 			//connexion à la Base de Données
 			$bdd = connect();
 
