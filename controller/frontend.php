@@ -1,25 +1,65 @@
 <?php
 require 'model/frontend.php';
 
-function loginForm(){
+function loginForm()
+{
 	require 'view/frontend/loginFormView.php';
 }
 
-function login(){
-	$user = getUser($_POST['loginUserName']);
 
-	if (password_verify($_POST['loginPassword'],$user['pwd'])){
-		$_SESSION = [
-			'last_name' => $user['last_name'],
-			'first_name' => $user['first_name'],
-			'user_name' => $user['user_name'],
-			'mail' => $user['mail']
-		];
 
-		require 'controller/backend.php';
-		displayMenu();
+function register()
+// Vérification de la validité des informations
+//on s'assure que tous les champs du formualire d'inscription ont bien été renseignés
+{
+	if (
+		isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['userName']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmPassword']) 
+	) //var_dump
+	{	//on déclare une variable pour chaque envoie de champ (+ facile à lire et à écrire)
+		$firstName = $_POST['firstName'];
+		$lastName = $_POST['lastName'];
+		$userName = $_POST['userName'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+		$confirmPassword = $_POST['confirmPassword'];
+
+		//on s'assure que le mot de passe et sa confirmation de mot de passe soient identiques
+		if ($password == $confirmPassword) {
+			// Hachage du mot de passe
+			$password_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+			$bdd = connect();
+
+
+			// Insertion
+			$req = $bdd->prepare('INSERT INTO users(first_name, last_name, user_name, mail, pwd) VALUES($firstName, $lastName, $userName, $email, $password)');
+			$req->execute(array(
+				'firstName' => $firstName,
+				'lastName' => $lastName,
+				'userName' => $userName,
+				'email' => $email,
+				'registerPassword' => $password_hache
+			));
+		}
 	}
-	else {
-		loginForm();
+
+
+
+	function login()
+	{
+		$user = getUser($_POST['loginUserName']);
+
+		if (password_verify($_POST['loginPassword'], $user['pwd'])) {
+			$_SESSION = [
+				'last_name' => $user['last_name'],
+				'first_name' => $user['first_name'],
+				'user_name' => $user['user_name'],
+				'mail' => $user['mail']
+			];
+
+			require 'controller/backend.php';
+			displayMenu();
+		} else {
+			loginForm();
+		}
 	}
-}

@@ -95,14 +95,14 @@ $title = 'Login Naturopathe';
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="Password" class="d-none d-md-block">Mot de passe :</label>
-										<input type="password" class="form-control" id="Password" placeholder="Mot de passe" name="password" required/>
+										<input type="password" class="form-control" id="Password" placeholder="Mot de passe" name="Password" required/>
 									</div>
 								</div>
 								<!----------- Confirmation Mot de Passe ----------->
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="ConfirmPassword" class="d-none d-md-block">Confirmez le mot de passe :</label>
-										<input type="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="Confirmez le mot de passe" required/>
+										<input type="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="Confirmez le mot de passe" name="confirmPassword" required/>
 									</div>
 								</div>
 								<!------------------- Bouton --------------------->
