@@ -19,6 +19,12 @@ $title = 'Login Naturopathe';
 				</nav>
 			</div>
 		</div>
+		<?php
+			
+			if(isset($_GET['success'])){
+				echo "<div class='alert alert-success'><p>".$_GET['success']."</p></div>";
+			}	
+		?>
 	</div>
 	<!----------------------------------------- FORMULAIRE CONNEXION ------------------------------------------------>
 	<div id="login-container" class="container mb-3">
@@ -56,7 +62,18 @@ $title = 'Login Naturopathe';
 	</div>
 	<!-------------------------------------------- FORMULAIRE INSCRIPTION ---------------------------------------------------->
 	<div id="register-container" class="container mb-3">
-		<form id="register-form" action="" method="post">
+		<form id="register-form" action="model/frontend.php" method="post">
+		
+			
+			<?php
+			
+				if(isset($_GET['error'])){
+					echo "<div class='alert alert-danger'><p>".$_GET['error']."</p></div>";
+				}	
+				if(isset($_GET['error2'])){
+					echo "<div class='alert alert-danger'><p>".$_GET['error2']."</p></div>";
+				}	
+			?>
 			<div class="row">
 				<div class="col">
 					<div class="card">
@@ -95,19 +112,19 @@ $title = 'Login Naturopathe';
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="Password" class="d-none d-md-block">Mot de passe :</label>
-										<input type="password" class="form-control" id="Password" placeholder="Mot de passe" name="Password" required/>
+										<input type="password" class="form-control" id="Password" placeholder="Mot de passe" name="password" required/>
 									</div>
 								</div>
 								<!----------- Confirmation Mot de Passe ----------->
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="ConfirmPassword" class="d-none d-md-block">Confirmez le mot de passe :</label>
-										<input type="ConfirmPassword" class="form-control" id="ConfirmPassword" placeholder="Confirmez le mot de passe" name="confirmPassword" required/>
+										<input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirmez le mot de passe" name="confirmPassword" required/>
 									</div>
 								</div>
 								<!------------------- Bouton --------------------->
 								<div class="col-md-4">
-									<button type="submit" class="btn btn-primary btn-lg btn-block">S'inscrire</button>
+									<button type="submit" id="validBTNAjoutUser" class="btn btn-primary btn-lg btn-block">S'inscrire</button>
 								</div>
 							</div>
 						</div>
@@ -116,7 +133,7 @@ $title = 'Login Naturopathe';
 			</div>
 		</form>
 	</div>
-
+	
 	<?php
 //récupère (get) et vide (clean) la mémoire tampon
 $content = ob_get_clean();

@@ -12,7 +12,7 @@ function register()
 // Vérification de la validité des informations
 //on s'assure que tous les champs du formualire d'inscription ont bien été renseignés
 {
-	if (
+/*$if (
 		isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['userName']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirmPassword'])
 	) //var_dump
 		{	//on déclare une variable pour chaque envoie de champ (+ facile à lire et à écrire)
@@ -26,23 +26,12 @@ function register()
 			//on s'assure que le mot de passe et sa confirmation de mot de passe soient identiques
 			if ($password == $confirmPassword) {
 				// Hachage du mot de passe
-				$password_hache = password_hash($_POST['password'], PASSWORD_DEFAULT);
+				$password_hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-				//connexion à la Base de Données
-				$bdd = connect();
-
-
-				// Insertion
-				$req = $bdd->prepare('INSERT INTO users(first_name, last_name, user_name, mail, pwd) VALUES($firstName, $lastName, $userName, $email, $password)');
-				$req->execute(array(
-					'firstName' => $firstName,
-					'lastName' => $lastName,
-					'userName' => $userName,
-					'email' => $email,
-					'registerPassword' => $password_hache
-				));
+				//Connexion à la BDD et envoie des données de l'utilisateur en BDD
+				createUser();
 			}
-		}
+		}*/
 	}
 
 
