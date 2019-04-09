@@ -24,7 +24,7 @@ $title = 'Menu Naturopathe';
     <div id="partie haute" class="container">
         <div class="row">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 22rem;">
                     <div class="card-body">
                         <h5 class="card-title">Êtes-vous intoxiqué aux métaux lourds ?</h5>
                         <p class="card-text">Comment savoir si vous êtes intoxiqués par les métaux lourds sans faire de test coûteux ou dangereux ? 
@@ -33,7 +33,7 @@ $title = 'Menu Naturopathe';
                     </div>
                 </div>
             </div>
-            <div class="col embed-responsive embed-responsive-16by9"><iframe width="658" height="370" src="https://www.youtube.com/embed/kQGvyL56R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+            <div class="col "><iframe width="100%" height="100%" src="https://www.youtube.com/embed/kQGvyL56R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
             </div>
         </div>
     </div>
