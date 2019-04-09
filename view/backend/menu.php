@@ -23,17 +23,17 @@ $title = 'Menu Naturopathe';
     <!--------------------------------------------- PARTIE HAUTE ------------------------------------------------>
     <div id="partie haute" class="container">
         <div class="row">
-            <div class="col">
-                <div class="card" style="width: 22rem;">
+            <div class="col-12 col-md-6">
+                <div class="card" style="width: 100%;">
                     <div class="card-body">
                         <h5 class="card-title">Êtes-vous intoxiqué aux métaux lourds ?</h5>
                         <p class="card-text">Comment savoir si vous êtes intoxiqués par les métaux lourds sans faire de test coûteux ou dangereux ? 
                         Je vous présente un test gratuit qui permet de vous faire une très bonne idée de votre niveau d’intoxication.</p>
-                        <a href="#" class="btn btn-primary">ACCÉDER AU TEST</a>
+                        <a href="#" class="btn btn-primary d-block">ACCÉDER AU TEST</a>
                     </div>
                 </div>
             </div>
-            <div class="col "><iframe width="100%" height="100%" src="https://www.youtube.com/embed/kQGvyL56R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
+            <div class="col-12 col-md-6 "><iframe width="100%" height="100%" src="https://www.youtube.com/embed/kQGvyL56R6M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>             
             </div>
         </div>
     </div>
