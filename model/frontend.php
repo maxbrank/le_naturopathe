@@ -4,7 +4,7 @@ function connect()
 {
     $dbname = "le_naturopathe";
     $user = "root";
-    $psd = "";
+    $psd = "root";
 
 
     try {

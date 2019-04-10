@@ -1,0 +1,57 @@
+<?php
+
+ob_start();
+
+$title = 'Fatigue - Le Naturopathe';
+
+?>
+<!--------------------------------------------- BREADCRUMB ------------------------------------------------>
+<div id="breadcrumb-container" class="container">
+    <div class="row">
+        <div class="col">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                    <!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+                    <li class="breadcrumb-item active" aria-current="page">Plus jamais fatigué et détox des métaux lourds</li>
+
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--------------------------------------------- ARTICLES ------------------------------------------------>
+<div class="row">
+    <div class="card col-12 col-md-4" style="width: 100%;">
+        <img class="card-img-top" src="Detox-Diets-For-Weight-Loss.-500x500.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card col-12 col-md-4" style="width: 100%;">
+        <img class="card-img-top" src="images/Smoothie-aux-fruits-500x346.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card col-12 col-md-4" style="width: 100%;">
+        <img class="card-img-top" src="images/Stop-a-la-fatigue-couv-500x500.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
+
+<?php
+
+$content = ob_get_clean();
+
+require 'view/template.php';
+?>
