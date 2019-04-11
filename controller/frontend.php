@@ -45,7 +45,8 @@ function register()
 				'last_name' => $user['last_name'],
 				'first_name' => $user['first_name'],
 				'user_name' => $user['user_name'],
-				'mail' => $user['mail']
+				'mail' => $user['mail'],
+				'id' => $user['id']
 			];
 
 			require 'controller/backend.php';

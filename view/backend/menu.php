@@ -41,62 +41,62 @@ $title = 'Menu Naturopathe';
 <hr id="hr1">
 
 <!--------------------------------------------- PARTIE BASSE ------------------------------------------------>
-<!--
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    //------ Indicators ------
+
+<div id="myCarousel" class="carousel slide container" data-ride="carousel">
+<!--//------ Indicators ------>
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-    
-    //------ Wrapper for slides ------
+
+    <!--//------ Wrapper for slides -------->
     <div class="carousel-inner">
-        <div class="item active">
-        <img src="images/Detox-Diets-For-Weight-Loss.-500x500.jpg" alt="Des jus de légumes pour plus de jus">
+        <div class="carousel-item active">
+            <img src="images/Detox-Diets-For-Weight-Loss.-500x500.jpg" alt="Des jus de légumes pour plus de jus" class="d-block w-100">
         </div>
 
-        <div class="item">
-        <img src="images/Stop-a-la-fatigue-couv-500x500.png" alt="Livre Stop à la fatigue chronique avec la naturopathie">
+        <div class="carousel-item">
+            <img src="images/Stop-a-la-fatigue-couv-500x500.png" alt="Livre Stop à la fatigue chronique avec la naturopathie" class="d-block w-100">
         </div>
 
-        <div class="item">
-        <img src="images/Smoothie-aux-fruits-500x346.jpg" alt="Mon Smoothie ô fruits">
+        <div class="carousel-item">
+            <img src="images\Secrets-de-naturopathes-500x500.jpg" alt="Secrets de naturopathes… Le livre" class="d-block w-100">
         </div>
     </div>
-    //------ Left and right controls ------
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
+    <!--//------ Left and right controls -------->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-    </div> 
--->
+</div>
+<!--
     <div id="my_carousel" class="carousel slide container" data-ride="carousel">
-        <!-- Bulles -->
+        <!-- Bulles
         <ol class="carousel-indicators">
             <li data-target="#my_carousel" data-slide-to="0" class="active"></li>
             <li data-target="#my_carousel" data-slide-to="1"></li>
             <li data-target="#my_carousel" data-slide-to="2"></li>
         </ol>
-        <!-- Slides -->
+        <!-- Slides
         <div class="carousel-inner">
-            <!-- Page 1 -->
+            <!-- Page 1
             <div class="item active">
                 <div class="carousel-page">
                     <img src="images/Detox-Diets-For-Weight-Loss.-500x500.jpg" class="img-responsive" style="margin:0px auto;" />
                 </div>
                 <div class="carousel-caption">Page 1 de présentation</div>
             </div>
-            <!-- Page 2 -->
+            <!-- Page 2
             <div class="item">
                 <div class="carousel-page"><img src="images/Stop-a-la-fatigue-couv-500x500.png" class="img-responsive img-rounded" style="margin:0px auto;" /></div>
                 <div class="carousel-caption">Page 2 de présentation</div>
             </div>
-            <!-- Page 3 -->
+            <!-- Page 3
             <div class="item">
                 <div class="carousel-page">
                     <img src="images/Smoothie-aux-fruits-500x346.jpg" class="img-responsive img-rounded" style="margin:0px auto;max-height:100%;" />
@@ -104,7 +104,7 @@ $title = 'Menu Naturopathe';
                 <div class="carousel-caption">Page 2 de présentation</div>
             </div>
         </div>
-        <!-- Contrôles -->
+        <!-- Contrôles
         <a class="left carousel-control" href="#my_carousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -112,9 +112,10 @@ $title = 'Menu Naturopathe';
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
+    -->
     <?php
 
-    $content = ob_get_clean();
+$content = ob_get_clean();
 
-    require 'view/template.php';
-    ?>
+require 'view/template.php';
+?>

@@ -43,7 +43,7 @@
 					<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 						<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 							<li class="nav-item active d-flex align-items-center">
-								<a class="nav-link" href="backend/fatigue.php">FATIGUE<span class="sr-only">(current)</span></a>
+								<a class="nav-link" href="index.php?fatigue=true">FATIGUE<span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item d-flex align-items-center">
 								<a class="nav-link" href="#">METAUX-LOURDS</a>
@@ -51,11 +51,17 @@
 							<li class="nav-item d-flex align-items-center">
 								<a class="nav-link" href="#">PRENDRE RENDEZ-VOUS</a>
 							</li>
+							<?php if(isset($_SESSION["user_name"])){
+							?> 
 							<li class="d-flex align-items-center">
 								<form method="post">
 									<button class="btn btn-default deconnexion" type="submit" name="logout" value="1">DECONNEXION</button>
 								</form>
 							</li>
+							<?php
+							}
+							?>
+
 							<!--<li class="nav-item d-flex align-items-center">
                                     <a class="nav-link" href="#"><img src="images/icon1.png"></a>
                                 </li>-->
