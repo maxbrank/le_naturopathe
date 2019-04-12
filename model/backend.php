@@ -39,5 +39,10 @@ function getArticle($idArticle){
      ':id_user' => htmlentities($_SESSION['id']),
      ':id_article' => htmlentities($_POST['ArticleId']),
  ));
+}
 
+function getPseudo(){ 
+    $bdd = connect();
+    $req = $bdd->prepare('SELECT user_name, id from users INNER JOIN comments ON comments.id_user = users.id WHERE comments.id_article = :idArticle');
+    $req->execute([':idArticle' =>  ]);
 }

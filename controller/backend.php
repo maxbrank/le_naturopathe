@@ -21,6 +21,7 @@ function displayArticle($idArticle){
 
 function createComment($content){
 	require_once 'model/backend.php';
+	getPseudo();
 	insertComment($content);
 	displayArticle($_GET['article']);
 }

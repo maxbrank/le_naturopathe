@@ -67,7 +67,7 @@ ob_start();
                                 <span class="text-muted pull-right">
                                     <small class="text-muted">posté le <?= $comment['created_at']; ?></small>
                                 </span>
-                                <p>
+                                <p><strong><?= ?></strong>
                                 <?= $comment['content']; ?>
                                 </p>
                             </div>
