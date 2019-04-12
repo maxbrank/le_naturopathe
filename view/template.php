@@ -88,7 +88,7 @@
 			<div class="card">
 				<div class="card-body row">
 					<div class="col-md-9">
-						<div id="logo" class="d-none d-md-block"><a href="index.html">
+						<div id="logo" class="d-none d-md-block"><a href="index.php">
 								<h4 class="align-items-center mb-0">Le NATUROPATHE</h4>
 							</a>
 						</div>
