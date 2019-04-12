@@ -64,7 +64,7 @@ ob_start();
                     ?> 
                         <li class="media">
                             <div class="media-body">
-                                <strong><?= $comment['pseudo'] ?></strong>
+                                <strong><?= $comment['user_name'] ?></strong>
                                 <span class="text-muted pull-right">                                    
                                     <small class="text-muted">posté le <?= $comment['created_at']; ?></small>
                                 </span>
