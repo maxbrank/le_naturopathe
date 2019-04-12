@@ -64,10 +64,11 @@ ob_start();
                     ?> 
                         <li class="media">
                             <div class="media-body">
-                                <span class="text-muted pull-right">
+                                <strong><?= ?></strong>
+                                <span class="text-muted pull-right">                                    
                                     <small class="text-muted">posté le <?= $comment['created_at']; ?></small>
                                 </span>
-                                <p><strong><?= ?></strong>
+                                <p>
                                 <?= $comment['content']; ?>
                                 </p>
                             </div>
