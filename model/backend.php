@@ -8,7 +8,7 @@ require_once 'model/frontend.php';
 function getCommentList($idArticle){
     $bdd = connect();
 
-    $req = $bdd->prepare('SELECT * FROM comments WHERE id_article = :idArticle');
+    $req = $bdd->prepare('SELECT * from users JOIN comments ON comments.id_user = users.id WHERE comments.id_article = :idArticle');
     $req->execute([':idArticle' => $idArticle]);
     return $req->fetchAll();
 }
@@ -39,10 +39,4 @@ function getArticle($idArticle){
      ':id_user' => htmlentities($_SESSION['id']),
      ':id_article' => htmlentities($_POST['ArticleId']),
  ));
-}
-
-function getPseudo(){ 
-    $bdd = connect();
-    $req = $bdd->prepare('SELECT user_name, id from users INNER JOIN comments ON comments.id_user = users.id WHERE comments.id_article = :idArticle');
-    $req->execute([':idArticle' =>  ]);
 }
