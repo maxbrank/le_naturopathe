@@ -11,7 +11,7 @@ ob_start();
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Accueil</a></li>
                     <!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
                     <li class="breadcrumb-item active" aria-current="page">Plus jamais fatigué et détox des métaux lourds</li>
 
