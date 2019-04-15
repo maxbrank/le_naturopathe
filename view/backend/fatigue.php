@@ -36,9 +36,10 @@ ob_start();
                     <a href="index.php?article=<?= $article['id']; ?>" class="btn btn-primary">Lire la suite</a>
                 </div>
             </div>
+        </div>
         <?php
-    }
-    ?>
+        }
+        ?>
     </div>
 </div>
 
