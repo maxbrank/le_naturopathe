@@ -25,7 +25,6 @@ if (isset($_POST)) {
 
 function createUser($data)
 {
-
     //connexion à la Base de Données
     $bdd = connect();
 
