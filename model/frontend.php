@@ -8,9 +8,8 @@ function connect()
     $options = array(
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 
-
     try {
-        $database = new PDO("mysql:host=localhost;dbname=$dbname", $user, $psd,$options);
+        $database =  new PDO("mysql:host=localhost;dbname=$dbname", $user, $psd, $options);
         return $database;
     } catch (Exception $err) {            // catch se lance que si on rencontre un pb dans le try
         echo "Erreur:" . $err->getMessage() . "</br>";
@@ -26,10 +25,6 @@ if (isset($_POST)) {
 
 function createUser($data)
 {
-
-    //if(isset($_POST)){var_dump($_POST);}
-    
-    
 
     //connexion à la Base de Données
     $bdd = connect();
@@ -80,8 +75,6 @@ function createUser($data)
         }
         
 };
-
-
 
 
 function getUser($login)
