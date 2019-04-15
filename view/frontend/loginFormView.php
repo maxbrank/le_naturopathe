@@ -139,5 +139,5 @@ $title = 'Login Naturopathe';
 //récupère (get) et vide (clean) la mémoire tampon
 $content = ob_get_clean();
 
-require 'view/template.php';
+require __DIR__.'/../../view/template.php';
 ?>
