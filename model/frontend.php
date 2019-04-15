@@ -26,11 +26,7 @@ if (isset($_POST)) {
 
 function createUser($data)
 {
-
-    //if(isset($_POST)){var_dump($_POST);}
-    
-    
-
+ 
     //connexion à la Base de Données
     $bdd = connect();
 
@@ -80,8 +76,6 @@ function createUser($data)
         }
         
 };
-
-
 
 
 function getUser($login)

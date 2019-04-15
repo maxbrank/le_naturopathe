@@ -42,8 +42,8 @@ ob_start();
 </div>
 -->
 
-    <div class="row bootstrap snippets">
-        <div class="col-md-6 col-md-offset-2 col-sm-12">
+    <div class="row mt-3">
+        <div class="col-12">
             <div class="comment-wrapper">
                 <div class="panel panel-info">
                     <!------ Saisie de commentaires ------->
@@ -52,10 +52,10 @@ ob_start();
                     </div>
                     <div class="panel-body">
                         <form method="POST">
-                            <textarea class="form-control" placeholder="write a comment..." rows="3" name="newContent"></textarea>
+                            <textarea class="form-control" placeholder="Laissez un commentaire..." rows="3" name="newContent"></textarea>
 
                             <br>
-                            <button class="btn btn-info pull-right" type="submit" name="ArticleId" value="<?= $article['id']; ?>">Post</button>
+                            <button class="btn btn-info pull-right" type="submit" name="ArticleId" value="<?= $article['id']; ?>">Envoyer</button>
                         </form>
                         <div class="clearfix"></div>
                         <hr>
