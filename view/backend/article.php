@@ -29,8 +29,8 @@ ob_start();
                 <h2><?= $article['title']; ?></h2>
             </div>
             <div class="col-md-6">
-                <img src="images/Detox-Diets-For-Weight-Loss.-538x218.jpg" width="538" height="218"
-                     alt="Des jus de légumes pour plus de jus">
+            <img src="images/<?= $article['img'];?>" width="100%" height="450"
+                     alt="<?= $article['title'];?>">
             </div>
             <div class="col-md-6">
                 <p><?= $article['content']; ?></p>

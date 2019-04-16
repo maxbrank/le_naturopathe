@@ -53,15 +53,21 @@ $title = 'Menu Naturopathe';
     <!--//------ Wrapper for slides -------->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="images/Detox-Diets-For-Weight-Loss.-500x500.jpg" alt="Des jus de légumes pour plus de jus" class="d-block w-100">
+            <a href="index.php?article=1">
+                <img src="images/Detox-Diets-For-Weight-Loss.-538x218.jpg" alt="Des jus de légumes pour plus de jus" class="d-block w-100">
+            </a>
         </div>
 
         <div class="carousel-item">
-            <img src="images/Stop-a-la-fatigue-couv-500x500.png" alt="Livre Stop à la fatigue chronique avec la naturopathie" class="d-block w-100">
+            <a href="index.php?article=2">
+                <img src="images/Stop-a-la-fatigue-couv-538x218.png" alt="Livre Stop à la fatigue chronique avec la naturopathie" class="d-block w-100">
+            </a>
         </div>
 
         <div class="carousel-item">
-            <img src="images\Secrets-de-naturopathes-500x500.jpg" alt="Secrets de naturopathes… Le livre" class="d-block w-100">
+            <a href="index.php?article=3">
+                <img src="images/Secrets-de-naturopathes-538x218.jpg" alt="Secrets de naturopathes… Le livre" class="d-block w-100">
+            </a>
         </div>
     </div>
     <!--//------ Left and right controls -------->
