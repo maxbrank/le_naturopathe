@@ -18,15 +18,15 @@ function createUser($data)
         if ($password == $confirmPassword) {
             $user = verifyExistingUser($userName, $email);
 
-
+            // si user_name n'existe pas déjà en BDD
             if (!isset($user['user_name'])) {
 
 
-                // Hachage du mot de passe
+                // Hachage/encryptage du mot de passe
                 $password_hashed = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
+                // Préparation de la requête vers Base de données
                 $req = $bdd->prepare('INSERT INTO users(first_name, last_name, user_name, mail, pwd) VALUES(:firstName, :lastName, :userName, :email, :password)');
-
+                //Execute la requete vers BDD
                 $success = $req->execute(array(
                     ':firstName' => htmlentities($firstName),
                     ':lastName' => htmlentities($lastName),

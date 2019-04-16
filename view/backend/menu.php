@@ -24,7 +24,7 @@ $title = 'Menu Naturopathe';
 <div id="partie haute" class="container">
     <div class="row">
         <div class="col-12 col-md-6 d-flex justify-content-center">
-            <div class="card" style="width: 100%;">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Êtes-vous intoxiqué aux métaux lourds ?</h5>
                     <p class="card-text">Comment savoir si vous êtes intoxiqués par les métaux lourds sans faire de test coûteux ou dangereux ?
