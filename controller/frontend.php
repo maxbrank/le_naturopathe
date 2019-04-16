@@ -12,12 +12,10 @@ function loginForm()
 
 
 function register($datareceived)
-// Vérification de la validité des informations
-//on s'assure que tous les champs du formulaire d'inscription ont bien été renseignés
+
 {
     createUser($datareceived);
 }
-
 
 
 

@@ -38,18 +38,12 @@ ob_start();
         </div>
 
         <!---------------------------------------------- COMMENTAIRES -------------------------------------->
-        <!-- <div class="saisieCommentaires">
-    <form id="SaisieCommentairesPlusDeJus" action="post">
-        <textarea name="content" id="Saisie" cols="30" rows="10"></textarea>
-    </form>
-    </div>
-    -->
-
+    
         <div class="row mt-3">
             <div class="col-12">
                 <div class="comment-wrapper">
                     <div class="panel panel-info">
-                        <!------ Saisie de commentaires ------->
+                        <!-------------------- Saisie de commentaires ------------->
                         <div class="panel-heading">
                             Laissez un commentaire :
                         </div>
@@ -65,7 +59,7 @@ ob_start();
                             </form>
                             <div class="clearfix"></div>
                             <hr>
-                            <!------ Liste des commentaires des internautes ------->
+                            <!------------ Liste des commentaires des internautes ------------->
                             <div class="panel-heading">
                                 Commentaires :
                             </div>
