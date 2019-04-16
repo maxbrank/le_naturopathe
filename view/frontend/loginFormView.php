@@ -63,7 +63,7 @@ $title = 'Login Naturopathe';
 	</div>
 	<!-------------------------------------------- FORMULAIRE INSCRIPTION ---------------------------------------------------->
 	<div id="register-container" class="container mb-3">
-		<form id="register-form" action="model/frontend.php" method="post">
+		<form id="register-form" action="" method="post">
 		
 			
 			<?php

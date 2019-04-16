@@ -6,7 +6,7 @@ function getCommentList($idArticle)
     $bdd = connect();
 
     $req = $bdd->prepare('SELECT * from users JOIN comments ON comments.id_user = users.id WHERE comments.id_article = :idArticle');
-    $req->execute([':idArticle' => $idArticle]);
+    $req->execute([':idArticle' => $idArticle]);    
     return $req->fetchAll();
 }
 
@@ -15,6 +15,7 @@ function getArticles()
     $bdd = connect();
 
     $req = $bdd->query('SELECT * FROM articles');
+
     return $req->fetchAll();
 }
 
@@ -24,16 +25,14 @@ function getArticle($idArticle)
 
     $req = $bdd->prepare('SELECT * FROM articles WHERE id = :id');
     $req->execute([':id' => $idArticle]);
-
     return $req->fetch();
 }
 
 function insertComment($content)
 {
-
     $bdd = connect();
-    $req = $bdd->prepare('INSERT INTO comments (content, id_user, id_article, created_at) VALUES(:content, :id_user, :id_article, NOW())');
 
+    $req = $bdd->prepare('INSERT INTO comments (content, id_user, id_article, created_at) VALUES(:content, :id_user, :id_article, NOW())'); // NOW() fonction sql qui récupère la date et lheure au moment de la requete
     $req->execute(array(
         ':content' => htmlentities($content),
         ':id_user' => htmlentities($_SESSION['id']),

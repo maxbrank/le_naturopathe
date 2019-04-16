@@ -8,6 +8,10 @@ if (isset($_POST['logout'])) {
     session_destroy();
     session_start();
 }
+if (isset($_POST['firstName']) && isset($_POST['confirmPassword'])) {
+    $datareceived = $_POST;
+    register($datareceived);
+};
 
 if (isset($_SESSION['last_name'])) {
     require_once __DIR__.'/controller/backend.php';
