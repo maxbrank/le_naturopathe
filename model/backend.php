@@ -32,7 +32,7 @@ function insertComment($content)
 {
     $bdd = connect();
     
-    // NOW() fonction sql qui récupère la date et lheure au moment de la requete
+    // NOW() fonction sql qui récupère la date et l'heure au moment de la requete
     $req = $bdd->prepare('INSERT INTO comments (content, id_user, id_article, created_at) VALUES(:content, :id_user, :id_article, NOW())'); 
     $req->execute(array(
         ':content' => htmlentities($content),

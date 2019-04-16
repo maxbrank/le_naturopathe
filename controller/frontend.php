@@ -12,7 +12,6 @@ function loginForm()
 
 
 function register($datareceived)
-
 {
     createUser($datareceived);
 }
