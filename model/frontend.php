@@ -4,9 +4,10 @@ function createUser($data)
 {
     //connexion à la Base de Données
     $bdd = connect();
-
+    
+    // On vérifie que chaque champ d'inscription ont été renseignés par l'utilisateur.
     if ((isset($_POST['firstName'])) && (isset($_POST['lastName'])) && (isset($_POST['userName'])) && (isset($_POST['email'])) && (isset($_POST['password'])) && (isset($_POST['confirmPassword']))) {
-        //on déclare une variable pour chaque envoie de champ (+ facile à lire et à écrire)
+        //on déclare une variable pour chaque envoi de champ (+ facile à lire et à écrire)
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
         $userName = $_POST['userName'];
@@ -16,7 +17,7 @@ function createUser($data)
 
         //on s'assure que le mot de passe et sa confirmation de mot de passe soient identiques
         if ($password == $confirmPassword) {
-            $user = verifyExistingUser($userName, $email);
+            $user = verifyExistingUser($userName, $email); // on vérifie que le userName(pseudo) et l'email n'existent pas déjà en bdd.
 
             // si user_name n'existe pas déjà en BDD
             if (!isset($user['user_name'])) {
@@ -28,7 +29,7 @@ function createUser($data)
                 $req = $bdd->prepare('INSERT INTO users(first_name, last_name, user_name, mail, pwd) VALUES(:firstName, :lastName, :userName, :email, :password)');
                 //Execute la requete vers BDD
                 $success = $req->execute(array(
-                    ':firstName' => htmlentities($firstName),
+                    ':firstName' => htmlentities($firstName),       //htmlentities — Convertit tous les caractères éligibles en entités HTML
                     ':lastName' => htmlentities($lastName),
                     ':userName' => htmlentities($userName),
                     ':email' => htmlentities($email),

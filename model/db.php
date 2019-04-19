@@ -8,8 +8,7 @@ function connect()
     $user = DB_LOGIN;
     $psd = DB_PWD;
     $options = array(
-        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-
+        PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'); // on s'assure que l'on respecte les caractères, les accents etc utf-8
     try {
         $database = new PDO("mysql:host=localhost;dbname=$dbname", $user, $psd, $options);
         return $database;
